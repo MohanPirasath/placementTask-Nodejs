@@ -102,7 +102,7 @@ app.post("/forgetpassword",async (req,res)=>{
             const token = jwt.sign({email:email,id:UserExist._id},Key,{
                 expiresIn:"1h"
             })
-            const CreateLink=`http://localhost:5000/resetpassword/${UserExist._id}/${token}`
+            const CreateLink=`https://mailnodeapp.herokuapp.com/resetpassword/${UserExist._id}/${token}`
 
             var transporter = nodemailer.createTransport({
                 service: 'gmail',
