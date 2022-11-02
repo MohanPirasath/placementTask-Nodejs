@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({limit:"30mb",extended:true}))
 
 app.use(cors())
 
-const PORT = 5000;
+const PORT = process.env.PORT;
 
 const Mongo_url=process.env.MONGOURL
 
